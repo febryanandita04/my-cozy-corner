@@ -1,0 +1,449 @@
+:root {
+    --pink: #f6b8cd;
+    --soft-pink: #fff0f5;
+    --white: #ffffff;
+    --dark-pink: #d66f97;
+    --brown: #70535e;
+    --cream: #fffaf7;
+    --lavender: #f1e8fa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: var(--cream);
+    color: var(--brown);
+    line-height: 1.7;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom: 2px dashed #f6c6d7;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    color: var(--dark-pink);
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    gap: 22px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--brown);
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: var(--dark-pink);
+}
+
+.hero {
+    min-height: 520px;
+    padding: 80px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    background: linear-gradient(
+        135deg,
+        #fff0f5,
+        #ffe2ed,
+        #fff8fc
+    );
+}
+
+.hero-content {
+    max-width: 570px;
+}
+
+.badge {
+    display: inline-block;
+    background: white;
+    color: var(--dark-pink);
+    border: 1px dashed var(--pink);
+    border-radius: 30px;
+    padding: 7px 16px;
+    margin-bottom: 20px;
+    font-size: 0.85rem;
+}
+
+.hero h1 {
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: var(--dark-pink);
+    font-family: 'Pacifico', cursive;
+    font-weight: 400;
+}
+
+.hero-content > p {
+    max-width: 440px;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    border: none;
+    border-radius: 30px;
+    background: var(--dark-pink);
+    color: white;
+    padding: 13px 25px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.button:hover {
+    background: #bf5b83;
+    transform: translateY(-3px);
+}
+
+.hero-decoration {
+    width: 270px;
+    height: 270px;
+    flex-shrink: 0;
+    border-radius: 48% 52% 50% 50%;
+    background: #ffffff;
+    border: 3px dashed #f3bad0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 10px 12px 0 #f7d6e3;
+}
+
+.teddy {
+    font-size: 110px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.floating-heart {
+    position: absolute;
+    font-size: 30px;
+    color: var(--dark-pink);
+}
+
+.heart-one {
+    top: 20px;
+    right: 30px;
+}
+
+.heart-two {
+    bottom: 30px;
+    left: 25px;
+}
+
+.heart-three {
+    top: 35px;
+    left: 20px;
+}
+
+.section {
+    padding: 75px 8%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-heading > span {
+    font-size: 1.6rem;
+    color: var(--dark-pink);
+}
+
+.section-heading h2 {
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    margin: 8px 0;
+}
+
+.section-heading p {
+    color: #9a7b88;
+}
+
+.mood-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.mood-card {
+    width: 115px;
+    padding: 20px 10px;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    background: white;
+    color: var(--brown);
+    box-shadow: 0 5px 15px #e9cbd733;
+    cursor: pointer;
+    transition: transform 0.2s, border 0.2s;
+}
+
+.mood-card span {
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.mood-card:hover {
+    transform: translateY(-5px);
+}
+
+.mood-card.active {
+    border-color: var(--dark-pink);
+    background: var(--soft-pink);
+}
+
+.mood-message {
+    text-align: center;
+    margin-top: 25px;
+    color: var(--dark-pink);
+    font-weight: 600;
+}
+
+.diary-section {
+    background: var(--soft-pink);
+}
+
+.diary-box {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 30px;
+    background: white;
+    border: 2px dashed #f1b6cd;
+    border-radius: 25px;
+    box-shadow: 7px 7px 0 #f6d6e3;
+}
+
+.diary-box label {
+    display: block;
+    font-weight: 700;
+    margin: 15px 0 8px;
+}
+
+.diary-box input,
+.diary-box textarea {
+    width: 100%;
+    border: 1px solid #f1c6d7;
+    border-radius: 12px;
+    background: #fffafd;
+    color: var(--brown);
+    padding: 13px;
+    outline: none;
+}
+
+.diary-box input:focus,
+.diary-box textarea:focus {
+    border-color: var(--dark-pink);
+    box-shadow: 0 0 0 3px #f6b8cd33;
+}
+
+.diary-box textarea {
+    resize: vertical;
+}
+
+.diary-box .button {
+    margin-top: 18px;
+}
+
+.diary-message {
+    margin-top: 12px;
+    color: var(--dark-pink);
+    font-weight: 600;
+}
+
+.saved-section {
+    max-width: 850px;
+    margin: 50px auto 0;
+}
+
+.saved-section h3 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.diary-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+}
+
+.diary-entry {
+    background: white;
+    border-radius: 18px;
+    padding: 20px;
+    border: 1px solid #f3d0df;
+    overflow-wrap: anywhere;
+}
+
+.diary-entry h4 {
+    color: var(--dark-pink);
+    margin-bottom: 5px;
+}
+
+.diary-entry time {
+    display: block;
+    color: #a68c97;
+    font-size: 0.8rem;
+    margin-bottom: 12px;
+}
+
+.diary-entry p {
+    white-space: pre-wrap;
+}
+
+.delete-button {
+    margin-top: 15px;
+    padding: 7px 12px;
+    border: none;
+    border-radius: 15px;
+    background: var(--soft-pink);
+    color: #b84f78;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.empty-message {
+    text-align: center;
+    grid-column: 1 / -1;
+    padding: 20px;
+}
+
+.favorites-grid {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.favorite-card {
+    text-align: center;
+    padding: 30px 18px;
+    background: white;
+    border-radius: 22px;
+    border: 2px dashed #f2c8d8;
+    transition: transform 0.2s;
+}
+
+.favorite-card:hover {
+    transform: translateY(-5px) rotate(-1deg);
+}
+
+.favorite-card span {
+    font-size: 2.5rem;
+}
+
+.favorite-card h3 {
+    color: var(--dark-pink);
+    margin: 10px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 15px;
+    background: white;
+    border-top: 2px dashed #f6c6d7;
+    font-size: 0.9rem;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+        padding: 15px;
+    }
+
+    nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px 18px;
+    }
+
+    nav a {
+        font-size: 0.85rem;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 7%;
+    }
+
+    .hero-content > p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-decoration {
+        width: 220px;
+        height: 220px;
+    }
+
+    .teddy {
+        font-size: 90px;
+    }
+
+    .section {
+        padding: 55px 6%;
+    }
+
+    .favorites-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .diary-box {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 380px) {
+    .favorites-grid {
+        grid-template-columns: 1fr;
+    }
+}
